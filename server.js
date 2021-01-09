@@ -2,6 +2,7 @@
 //====================//
 const express = require('express');
 const path = require('path');
+const exphbs = require('express-handlebars');
 
 //*** Express app ***//
 //===================//
@@ -13,6 +14,14 @@ const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.resolve(__dirname, './public');
 const CONT_DIR = path.resolve(__dirname, './controllers');
 const controller = path.join(CONT_DIR, './controller')
+
+//*** View Engine ***//
+//====================//
+app.engine('hbs', exphbs({
+    defaultLayout: 'main',
+    extname: '.hbs'
+}));
+app.set('view engine', 'hbs');
 
 //*** Middleware ***//
 //==================//

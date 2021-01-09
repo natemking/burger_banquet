@@ -45,7 +45,7 @@ Licensed under the GNU GPLv3.0 License. Copyright © 2020
 
 <!-- * [Guide to Express-Handlebars](https://stackabuse.com/guide-to-handlebars-templating-engine-for-node/)
 
-* [Concatenating MySQL results](https://stackoverflow.com/questions/4494775/mysql-concat-function)
+* [Better Express routing for Node JS](https://caffeinecoding.com/better-express-routing-for-nodejs/)
 
 * [Pooling MySQL connection](https://stackoverflow.com/questions/18496540/node-js-mysql-connection-pooling)
 
