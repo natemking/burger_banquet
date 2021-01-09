@@ -21,5 +21,5 @@ orm.updateOne();
 
 
 module.exports = {
-    
+
 };
