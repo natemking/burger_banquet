@@ -43,7 +43,7 @@ Licensed under the GNU GPLv3.0 License. Copyright © 2020
 
 ## Credits
 
-<!-- * [Module Export more that one function](https://stackoverflow.com/questions/16631064/declare-multiple-module-exports-in-node-js/50692464)
+<!-- * [Guide to Express-Handlebars](https://stackabuse.com/guide-to-handlebars-templating-engine-for-node/)
 
 * [Concatenating MySQL results](https://stackoverflow.com/questions/4494775/mysql-concat-function)
 
