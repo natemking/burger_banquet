@@ -47,7 +47,7 @@ Licensed under the GNU GPLv3.0 License. Copyright © 2020
 
 * [Better Express routing for Node JS](https://caffeinecoding.com/better-express-routing-for-nodejs/)
 
-* [Pooling MySQL connection](https://stackoverflow.com/questions/18496540/node-js-mysql-connection-pooling)
+* [Fix for static routing w/ Handlebars](https://github.com/pillarjs/hbs/issues/149)
 
 * [Node, MySql, & Async/Await](https://codeburst.io/node-js-mysql-and-async-await-6fb25b01b628) 
 

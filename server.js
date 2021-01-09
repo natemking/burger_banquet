@@ -24,8 +24,8 @@ app.engine('hbs', exphbs({
 app.set('view engine', 'hbs');
 
 //*** Middleware ***//
-//==================//
-app.use(express.static(PUBLIC_DIR));
+//==================// 
+app.use('/public', express.static(PUBLIC_DIR));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
