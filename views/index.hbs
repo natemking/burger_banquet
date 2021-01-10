@@ -1,13 +1,13 @@
 
 <main class="container">
   <section class="row">
+      {{!-- Main jumboron --}}
       <section class="col-12">
             <section class="jumbotron mt-4 text-center">
-                
                 <img id="burger-man" alt="man eating a burger" class="img-fluid" src="../public/assets/images/burger-man.png" />
                 <h1>Burger Banquet</h1>
                 <p class="lead my-4">Let's eat some burgers!</p>
-                
+                {{!-- Data entry form --}}
                 <form>
                     <section class="form-group">
                         <textarea class="form-control" id="burger-text" rows="1" placeholder="Enter a burger"></textarea>
@@ -18,19 +18,24 @@
             </section>
       </section>
   </section>
+
   <section class="row text-center">
+      {{!-- Uneaten list --}}
         <section class="col-sm-6">
             <ul id="uneaten">
                 <li>Test<button>Devour It!</button></li>
             </ul>
         </section> 
 
+        {{!-- Devoured list --}}
         <section class="col-sm-6">
             <ul id="devoured">
                 <li>Test</li>
             </ul>
         </section>
+
   </section>
+
 </main>
 
 

@@ -20,16 +20,25 @@ const burger = require(`${MODELS_DIR}/burger`);
 //===============//
 const router = express.Router();
 
+//*** API Routes ***//
+//==================//
+router.route('/api/burgers/:id?')
+.get((req,res) => {
+    const id = req.params.id;
+    res.json(id)
+})
+
 //*** HTML Routes ***//
 //===================//
 //Root route
 router.route('/')
 .get((req, res) => { 
     res.render(index);
-})
-//Catch all redirects to root
+});
+
+// Catch all redirects to root
 router.all('*', (req, res) => {
   res.redirect('/');
-})
+});
 
 module.exports = router;
