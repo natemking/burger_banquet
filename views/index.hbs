@@ -12,21 +12,21 @@
                     <section class="form-group">
                         <textarea class="form-control" id="burger-text" rows="1" placeholder="Enter a burger"></textarea>
                     </section>
-                    <button id="add-btn" class="btn btn-light btn-lg" role="button">Add a Burger</button>
+                    <button id="add-btn" class="btn btn-light btn-lg" role="button">Add that Burger!</button>
                 </form>
         
             </section>
       </section>
   </section>
 
-  <section class="row text-center">
+  <section class="row justify-content-around">
       {{!-- Uneaten list --}}
-        <section class="col-sm-6">
-            <ul id="uneaten" class="list-group">
+        <section class="col-sm-4">
+            <ul id="uneaten" class="list-group-flush">
                 {{#each burgers}}
                     {{!-- {{#unless this.devoured}} --}}
-                        <li class="list-group-item">{{this.burger_name}}
-                            <button>Devour It!</button>
+                        <li class="list-group-item d-flex flex-row justify-content-between"><span>{{this.burger_name}}</span>
+                            <button class="btn btn-success">Devour It!</button>
                         </li>
                     {{!-- {{/unless}} --}}
                 {{/each}}
@@ -34,7 +34,7 @@
         </section> 
 
         {{!-- Devoured list --}}
-        <section class="col-sm-6">
+        <section class="col-sm-4">
             <ul id="devoured">
                 <li>Test</li>
             </ul>
