@@ -21,19 +21,26 @@ body {
 
 .jumbotron h1 {
     position: relative;
+    z-index: 10;
     font-family: 'Fontdiner Swanky', cursive;
     color: 	rgb(255, 242, 197);
     font-size: calc(64px + 1vw);
     text-shadow:2px 0px 10px rgb(105, 105, 105);
-    z-index: 10;
 }
 
 .jumbotron p {
     position: relative;
+    z-index: 10;
     color: rgb(250, 207, 34);
     text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
     font-size: 2rem;
+}
+
+#burger-text {
+    position:relative;
     z-index: 10;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 #add-btn {
@@ -71,8 +78,11 @@ footer a:hover{
 
 /* Media Queries */
 @media (max-width: 768px){
+    .jumbotron{
+        min-height: 80vh;
+    }
     .jumbotron p {
-        visibility: hidden;
+        display: none;
     }
 }
 
