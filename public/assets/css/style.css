@@ -1,4 +1,82 @@
-body {
-    background-image: url('../images/pixel-art-cheeseburger-seamless-background.jpg');
+@import url('https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Josefin+Sans&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    background-image: url('../images/pixel-art-cheeseburger-seamless-background.jpg');
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.jumbotron {
+    position: relative;
+    background-color: rgb(227, 107, 49);
+    box-shadow:2px 2px 10px rgb(105, 105, 105);
+}
+
+.jumbotron h1 {
+    position: relative;
+    font-family: 'Fontdiner Swanky', cursive;
+    color: 	rgb(255, 242, 197);
+    font-size: calc(64px + 1vw);
+    text-shadow:2px 0px 10px rgb(105, 105, 105);
+    z-index: 10;
+}
+
+.jumbotron p {
+    position: relative;
+    color: rgb(250, 207, 34);
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    font-size: 2rem;
+    z-index: 10;
+}
+
+#add-btn {
+    position: relative;
+    z-index: 10;
+}
+
+#burger-man {
+position: absolute;
+right: 0;
+bottom: 0;
+min-width: 33%;
+width: calc((25em - 100%) * 1000);
+max-width: 100%;
+}
+
+footer {
+    position: absolute;
+    text-align: end;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color:rgb(80, 80, 80)
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: rgb(227, 107, 49);
+}
+
+/* Media Queries */
+@media (max-width: 768px){
+    .jumbotron p {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 320px){
+    .jumbotron h1 {
+        font-size: calc(50px + 1vw);
+    }
+    .jumbotron p {
+        font-size: 1.5rem;
+    }
+}
