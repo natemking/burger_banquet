@@ -17,10 +17,7 @@ const controller = path.join(CONT_DIR, './controller')
 
 //*** View Engine ***//
 //====================//
-app.engine('hbs', exphbs({
-    defaultLayout: 'main',
-    extname: '.hbs'
-}));
+app.engine('hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', 'hbs');
 
 //*** Middleware ***//
@@ -33,16 +30,12 @@ app.use(express.json());
 //==============//
 const router = require(controller);
 
-
+//*** Routing ***//
+//===============//
 app.use('/', router);
-
-
-
 
 
 //*** Listener ***//
 //================//
-app.listen(PORT, () => {
-    console.log(`Server listening on PORT:${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server listening on PORT:${PORT}`));
 
