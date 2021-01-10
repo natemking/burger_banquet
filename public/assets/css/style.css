@@ -1,5 +1,7 @@
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Josefin+Sans&display=swap');
 
+/* Global */
 body, html {
     margin: 0;
     padding: 0;
@@ -10,6 +12,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+/* Main */
 .jumbotron {
     position: relative;
     background-color: rgb(227, 107, 49);
@@ -47,6 +50,7 @@ width: calc((25em - 100%) * 1000);
 max-width: 100%;
 }
 
+/* Footer */
 footer {
     position: absolute;
     text-align: end;
