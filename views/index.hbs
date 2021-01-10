@@ -22,10 +22,10 @@
   <section class="row text-center">
       {{!-- Uneaten list --}}
         <section class="col-sm-6">
-            <ul id="uneaten">
+            <ul id="uneaten" class="list-group">
                 {{#each burgers}}
                     {{!-- {{#unless this.devoured}} --}}
-                        <li>{{this.burger_name}}
+                        <li class="list-group-item">{{this.burger_name}}
                             <button>Devour It!</button>
                         </li>
                     {{!-- {{/unless}} --}}
