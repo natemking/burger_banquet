@@ -24,19 +24,25 @@
         <section class="col-sm-4">
             <ul id="uneaten" class="list-group-flush">
                 {{#each burgers}}
-                    {{!-- {{#unless this.devoured}} --}}
+                    {{#unless this.devoured}}
                         <li class="list-group-item d-flex flex-row justify-content-between"><span>{{this.burger_name}}</span>
                             <button class="btn btn-success">Devour It!</button>
                         </li>
-                    {{!-- {{/unless}} --}}
+                    {{/unless}}
                 {{/each}}
             </ul>
         </section> 
 
         {{!-- Devoured list --}}
         <section class="col-sm-4">
-            <ul id="devoured">
-                <li>Test</li>
+            <ul id="uneaten" class="list-group-flush">
+                {{#each burgers}}
+                    {{#if this.devoured}}
+                        <li class="list-group-item disabled d-flex flex-row justify-content-between"><span>{{this.burger_name}}</span>
+                            <button class="btn btn-success">Devour It!</button>
+                        </li>
+                    {{/if}}
+                {{/each}}
             </ul>
         </section>
 
