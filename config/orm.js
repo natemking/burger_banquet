@@ -4,8 +4,11 @@ const pool = require('./connection');
 
 //MySQL Queries
 module.exports = {
-    selectAll: () => {
-        
+    selectAll: (tableInput, cb) => {
+        pool.query(`SELECT * FROM ${tableInput}`, (err, result) => {
+            if(err) throw err;
+            cb(result)
+        })
     },
     insertOne: () => {
       

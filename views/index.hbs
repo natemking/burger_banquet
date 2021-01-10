@@ -23,7 +23,13 @@
       {{!-- Uneaten list --}}
         <section class="col-sm-6">
             <ul id="uneaten">
-                <li>Test<button>Devour It!</button></li>
+                {{#each burgers}}
+                    {{!-- {{#unless this.devoured}} --}}
+                        <li>{{this.burger_name}}
+                            <button>Devour It!</button>
+                        </li>
+                    {{!-- {{/unless}} --}}
+                {{/each}}
             </ul>
         </section> 
 

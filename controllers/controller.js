@@ -10,8 +10,6 @@ const MODELS_DIR = path.resolve(__dirname, '../models');
 const VIEWS_DIR = path.resolve(__dirname, '../views');
 const index = path.join(VIEWS_DIR, 'index')
 
-
-
 //*** Modules ***//
 //===============//
 const burger = require(`${MODELS_DIR}/burger`);
@@ -25,15 +23,20 @@ const router = express.Router();
 router.route('/api/burgers/:id?')
 .get((req,res) => {
     const id = req.params.id;
-    res.json(id)
+    burger.all((data) => {
+        res.json(data);
+    });
 })
 
 //*** HTML Routes ***//
 //===================//
 //Root route
 router.route('/')
-.get((req, res) => { 
-    res.render(index);
+.get((req, res) => {
+    burger.all((data) => {
+        // hbsObj = {burgers: data};
+        res.render(index, {burgers: data});
+    });
 });
 
 // Catch all redirects to root
