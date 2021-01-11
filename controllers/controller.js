@@ -43,9 +43,12 @@ router.post('/insert', (req, res) => {
     });
 });
 
-router.put('/update/:id', (req, res) => {
+router.put('/update/:id/:devoured', (req, res) => {
     let con = `id = ${req.params.id}`;
-    burger.updateOne('devoured = 1', con, () => {
+    //Toggle devoured 
+    req.params.devoured = 1 - req.params.devoured;
+    
+    burger.updateOne(`devoured = ${req.params.devoured}`, con, () => {
         res.redirect('/');
     }); 
 });

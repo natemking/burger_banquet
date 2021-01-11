@@ -27,7 +27,7 @@
                 {{#each burgers}}
                 {{#unless this.devoured}}
                 <li class="list-group-item d-flex flex-row justify-content-between"><span>{{this.burger_name}}</span>
-                   <form method="POST" action="/update/{{this.id}}?_method=PUT"> 
+                   <form method="POST" action="/update/{{this.id}}/{{this.devoured}}?_method=PUT"> 
                        <button type="submit" class="btn btn-success">Devour It!</button>
                     </form>
                 </li>
@@ -43,7 +43,7 @@
                 {{#if this.devoured}}
                 <li class="list-group-item d-flex flex-row justify-content-around">
                     <span class="mr-auto p-2">{{this.burger_name}}</span>
-                    <form method="POST" action="/update/{{this.id}}?_method=PUT">
+                    <form method="POST" action="/update/{{this.id}}/{{this.devoured}}?_method=PUT">
                         <button type="submit" class="btn btn-success p-2 mr-1">Make Another?</button>
                     </form>
                     <form method="POST" action="/delete/{{this.id}}?_method=DELETE">
