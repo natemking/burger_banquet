@@ -44,10 +44,17 @@ router.post('/insert', (req, res) => {
 });
 
 router.put('/update/:id', (req, res) => {
-    let con = `id = ${req.params.id}`
-    burger.updateOne('devoured = 1', con, () =>{
+    let con = `id = ${req.params.id}`;
+    burger.updateOne('devoured = 1', con, () => {
         res.redirect('/');
     }); 
+});
+
+router.delete('/delete/:id', (req, res) => {
+    let con = {id: req.params.id};
+    burger.deleteOne(con, () => {
+        res.redirect('/');
+    });
 });
 
 // Catch all redirects to root

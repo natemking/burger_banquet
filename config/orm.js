@@ -7,7 +7,7 @@ module.exports = {
     selectAll: (table, cb) => {
         pool.query(`SELECT * FROM ${table}`, (err, result) => {
             if(err) throw err;
-            cb(result)
+            cb(result);
         })
     },
     insertOne: (table, cols, values, cb) => {
@@ -21,5 +21,11 @@ module.exports = {
             if (err) throw err;
             cb(result);
         });
+    },
+    deleteOne: (table, con, cb) => {
+      pool.query(`DELETE FROM ${table} WHERE ?`, con, (err, result) => {
+          if(err) throw err;
+          cb(result);
+      });
     }
 }
