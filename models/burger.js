@@ -31,4 +31,4 @@ module.exports = {
 }
 
 // console.log(require(`${paths.CONFIG_DIR}/orm`));
-console.log(orm);
+// console.log(orm);

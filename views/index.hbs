@@ -20,43 +20,7 @@
         </section>
     </section>
 
-    <section class="row justify-content-around">
-        {{!-- Uneaten list --}}
-        <section class="col-sm-4">
-            <ul id="uneaten" class="list-group-flush">
-                {{#each burgers}}
-                
-                {{#unless this.devoured}}
-                
-                <li class="list-group-item d-flex flex-row justify-content-between"><span>{{this.burger_name}}</span>
-                   <form method="POST" action="/update/{{this.id}}/{{this.devoured}}?_method=PUT"> 
-                       <button type="submit" class="btn btn-success">Devour It!</button>
-                    </form>
-                </li>
-                {{/unless}}
-                {{/each}}
-            </ul>
-        </section>
-
-        {{!-- Devoured list --}}
-        <section class="col-sm-6">
-            <ul id="uneaten" class="list-group-flush">
-                {{#each burgers}}
-                {{#if this.devoured}}
-                <li class="list-group-item d-flex flex-row justify-content-around">
-                    <span class="mr-auto p-2">{{this.burger_name}}</span>
-                    <form method="POST" action="/update/{{this.id}}/{{this.devoured}}?_method=PUT">
-                        <button type="submit" class="btn btn-warning p-2 mr-1">Make Another?</button>
-                    </form>
-                    <form method="POST" action="/delete/{{this.id}}?_method=DELETE">
-                        <button type="submit" class="btn btn-danger p-2">Trash it</button>
-                    </form>
-                </li>
-                {{/if}}
-                {{/each}}
-            </ul>
-        </section>
-
-    </section>
+    {{!-- Menu and Devoured lists --}}
+    {{> lists}}
 
 </main>
