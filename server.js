@@ -3,6 +3,7 @@
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
+const methodOverride = require('method-override');
 
 //*** Express app ***//
 //===================//
@@ -15,6 +16,10 @@ const PUBLIC_DIR = path.resolve(__dirname, './public');
 const CONT_DIR = path.resolve(__dirname, './controllers');
 const controller = path.join(CONT_DIR, './controller')
 
+//*** Router ***//
+//==============//
+const router = require(controller);
+
 //*** View Engine ***//
 //====================//
 app.engine('hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
@@ -23,12 +28,9 @@ app.set('view engine', 'hbs');
 //*** Middleware ***//
 //==================// 
 app.use('/public', express.static(PUBLIC_DIR));
+app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-//*** Router ***//
-//==============//
-const router = require(controller);
 
 //*** Routing ***//
 //===============//

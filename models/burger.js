@@ -14,9 +14,9 @@ module.exports = {
   all: (cb) => {
       orm.selectAll('burgers', (res) => cb(res));
   },
-  insertOne: () => {
-      orm.insertOne();
-  },
+  insertOne: (cols, values, cb) => {
+      orm.insertOne('burgers', cols, values, (res) => {cb(res)});
+  }, 
 
   updateOne: () => {
       orm.updateOne();

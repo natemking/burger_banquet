@@ -3,7 +3,6 @@
 const express = require('express');
 const path = require('path');
 
-
 //*** Directories ***//
 //===================//
 const MODELS_DIR = path.resolve(__dirname, '../models');
@@ -34,10 +33,18 @@ router.route('/api/burgers/:id?')
 router.route('/')
 .get((req, res) => {
     burger.all((data) => {
-        // hbsObj = {burgers: data};
         res.render(index, {burgers: data});
     });
 });
+
+router.post('/insert', (req, res) => {
+    burger.insertOne('burger_name', req.body.burger, ()=>{
+        res.redirect('/');
+    });
+    
+    
+});
+
 
 // Catch all redirects to root
 router.all('*', (req, res) => {
