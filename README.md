@@ -3,6 +3,9 @@ Homework #13 Express-Handlebars: Burger Banquet
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/natemking/burger_banquet/blob/main/LICENSE)
 
+![html5 badge](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=flat&logo=html5&logoColor=white)
+![css3 badge](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=flat&logo=css3&logoColor=white)
+![bootstrap badge](https://img.shields.io/badge/bootstrap%20-%23563D7C.svg?&style=flat&logo=bootstrap&logoColor=white)
 ![node.js badge](https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=flat&logo=node.js&logoColor=white)
 ![express badge](https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=flat)
 ![express-handlebars badge](https://img.shields.io/badge/express--handlebars%20-%23654321.svg?&style=flatColor=white%22/)
@@ -49,9 +52,9 @@ Licensed under the GNU GPLv3.0 License. Copyright © 2020
 
 * [Fix for static routing w/ Handlebars](https://github.com/pillarjs/hbs/issues/149)
 
-* [Node, MySql, & Async/Await](https://codeburst.io/node-js-mysql-and-async-await-6fb25b01b628) 
+* [Toggle an Boolean](https://stackoverflow.com/questions/11604409/how-to-toggle-a-boolean) 
 
-* [Remove duplicates from an array](https://www.javascripttutorial.net/array/javascript-remove-duplicates-from-array/) -->
+* [Using multiple express routes](https://riptutorial.com/express/example/16315/multiple-routes) -->
 
 
 
