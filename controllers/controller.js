@@ -25,7 +25,7 @@ router.route('/api/burgers/:id?')
     burger.all((data) => {
         res.json(data);
     });
-})
+});
 
 //*** HTML Routes ***//
 //===================//
@@ -41,10 +41,14 @@ router.post('/insert', (req, res) => {
     burger.insertOne('burger_name', req.body.burger, ()=>{
         res.redirect('/');
     });
-    
-    
 });
 
+router.put('/update/:id', (req, res) => {
+    let con = `id = ${req.params.id}`
+    burger.updateOne('devoured = 1', con, () =>{
+        res.redirect('/');
+    }); 
+});
 
 // Catch all redirects to root
 router.all('*', (req, res) => {

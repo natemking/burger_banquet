@@ -16,7 +16,10 @@ module.exports = {
           cb(result);
       })
     },
-    updateOne: () => {
-      
+    updateOne: (table, colNVal, con, cb) => {
+        pool.query(`UPDATE ${table} SET ${colNVal} WHERE ${con};`, (err, result) => {
+            if (err) throw err;
+            cb(result);
+        });
     }
 }

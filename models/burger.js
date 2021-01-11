@@ -15,11 +15,11 @@ module.exports = {
       orm.selectAll('burgers', (res) => cb(res));
   },
   insertOne: (cols, values, cb) => {
-      orm.insertOne('burgers', cols, values, (res) => {cb(res)});
+      orm.insertOne('burgers', cols, values, (res) => cb(res));
   }, 
 
-  updateOne: () => {
-      orm.updateOne();
+  updateOne: (colNVal, con, cb) => {
+      orm.updateOne('burgers', colNVal, con, (res) => cb(res));
   }
 }
 

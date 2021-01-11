@@ -27,7 +27,9 @@
                 {{#each burgers}}
                 {{#unless this.devoured}}
                 <li class="list-group-item d-flex flex-row justify-content-between"><span>{{this.burger_name}}</span>
-                    <button class="btn btn-success">Devour It!</button>
+                   <form method="POST" action="/update/{{this.id}}?_method=PUT"> 
+                       <button type="submit" class="btn btn-success">Devour It!</button>
+                    </form>
                 </li>
                 {{/unless}}
                 {{/each}}
