@@ -1,12 +1,11 @@
 <section class="row justify-content-around">
-    
+
     {{!-- Menu list --}}
     <section class="col-sm-4">
-        <ul id="uneaten" class="list-group-flush">
+        <ul id="menu-list" class="list-group-flush text-center">
+            <h2 id="menu-heading" class="list-heading">Menu</h2>
             {{#each burgers}}
-
             {{#unless this.devoured}}
-
             <li class="list-group-item d-flex flex-row justify-content-between"><span>{{this.burger_name}}</span>
                 <form method="POST" action="/update/{{this.id}}/{{this.devoured}}?_method=PUT">
                     <button type="submit" class="btn btn-success">Devour It!</button>
@@ -19,7 +18,8 @@
 
     {{!-- Devoured list --}}
     <section class="col-sm-6">
-        <ul id="uneaten" class="list-group-flush">
+        <ul id="devoured-list" class="list-group-flush text-center">
+            <h2 id="devoured-heading" class="list-heading">Devoured</h2>
             {{#each burgers}}
             {{#if this.devoured}}
             <li class="list-group-item d-flex flex-row justify-content-around">
