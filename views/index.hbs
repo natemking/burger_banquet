@@ -8,10 +8,9 @@
                 <h1>Burger Banquet</h1>
                 <p class="lead my-4">Let's eat some burgers!</p>
                 {{!-- Data entry form --}}
-                <form method="POST" action="/insert">
+                <form id="add-burger">
                     <section class="form-group">
-                        <textarea class="form-control" type="text" id="burger-text" rows="1"
-                            placeholder="Enter a burger" name="burger"></textarea>
+                        <input class="form-control" type="text" id="add-burger-text" placeholder="Enter a burger" name="add"></input>
                     </section>
                     <button id="add-btn" type="submit" class="btn btn-light btn-lg" role="button">Add that Burger!</button>
                 </form>

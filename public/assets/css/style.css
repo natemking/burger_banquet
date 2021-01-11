@@ -36,7 +36,7 @@ body {
     font-size: 2rem;
 }
 
-#burger-text {
+#add-burger-text {
     position:relative;
     z-index: 10;
     max-width: 300px;

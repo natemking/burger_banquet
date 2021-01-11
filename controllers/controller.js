@@ -25,7 +25,11 @@ router.route('/api/burgers/:id?')
     burger.all((data) => {
         res.json(data);
     });
-});
+})
+
+router.post('/api/burgers', (req, res) => {
+    console.log(req.body.burger);
+})
 
 //*** HTML Routes ***//
 //===================//
@@ -37,11 +41,11 @@ router.route('/')
     });
 });
 //Add a burger
-router.post('/insert', (req, res) => {
-    burger.insertOne('burger_name', req.body.burger, ()=>{
-        res.redirect('/');
-    });
-});
+// router.post('/insert', (req, res) => {
+//     burger.insertOne('burger_name', req.body.burger, ()=>{
+//         res.redirect('/');
+//     });
+// });
 //Devour a burger or add it back to the menu
 router.put('/update/:id/:devoured', (req, res) => {
     //Toggle devoured so the burger can move to the appropriate table
