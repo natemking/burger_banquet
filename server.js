@@ -14,7 +14,8 @@ const PORT = process.env.PORT || 3000;
 //===================//
 const PUBLIC_DIR = path.resolve(__dirname, './public');
 const CONT_DIR = path.resolve(__dirname, './controllers');
-const controller = path.join(CONT_DIR, './controller')
+const CONFIG_DIR = path.resolve(__dirname, './config');
+const controller = path.join(CONT_DIR, './controller');
 
 //*** Router ***//
 //==============//
@@ -36,8 +37,12 @@ app.use(express.json());
 //===============//
 app.use('/', router);
 
-
 //*** Listener ***//
 //================//
 app.listen(PORT, () => console.log(`Server listening on PORT:${PORT}`));
 
+module.exports = {
+    PUBLIC_DIR,
+    CONT_DIR,
+    CONFIG_DIR
+}

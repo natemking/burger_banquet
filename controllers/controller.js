@@ -36,26 +36,24 @@ router.route('/')
         res.render(index, {burgers: data});
     });
 });
-
+//Add a burger
 router.post('/insert', (req, res) => {
     burger.insertOne('burger_name', req.body.burger, ()=>{
         res.redirect('/');
     });
 });
-
+//Devour a burger or add it back to the menu
 router.put('/update/:id/:devoured', (req, res) => {
-    let con = `id = ${req.params.id}`;
-    //Toggle devoured 
+    //Toggle devoured so the burger can move to the appropriate table
     req.params.devoured = 1 - req.params.devoured;
-    
-    burger.updateOne(`devoured = ${req.params.devoured}`, con, () => {
+    //Update if burger has been eaten or made again
+    burger.updateOne(`${Object.keys(req.params)[1]}`, req.params.devoured, `${Object.keys(req.params)[0]}`, req.params.id, () => {
         res.redirect('/');
     }); 
 });
-
+//Trash a burger thats been devoured
 router.delete('/delete/:id', (req, res) => {
-    let con = {id: req.params.id};
-    burger.deleteOne(con, () => {
+    burger.deleteOne(`${Object.keys(req.params)[0]}`, req.params.id, () => {
         res.redirect('/');
     });
 });
