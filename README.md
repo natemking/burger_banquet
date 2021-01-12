@@ -34,10 +34,13 @@ Homework #13 Express-Handlebars: Burger Banquet
 
 ![app gif](public/assets/images/screenshots/burger_banquet.gif)
 <br>
+
 _App Functionality_
 <br>
+
 ![mobile resolution](public/assets/images/screenshots/burger_banquet_mobile.png)
-_Mobile Resolution_
+
+_Mobile Responsiveness_
 
 ## License
 Licensed under the GNU GPLv3.0 License. Copyright © 2020
