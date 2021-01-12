@@ -16,6 +16,7 @@ const PUBLIC_DIR = path.resolve(__dirname, './public');
 const CONT_DIR = path.resolve(__dirname, './controllers');
 const CONFIG_DIR = path.resolve(__dirname, './config');
 const MODELS_DIR = path.resolve(__dirname, './models');
+const VIEWS_DIR = path.resolve(__dirname, './views');
 const controller = path.join(CONT_DIR, './controller');
 
 //*** Router ***//
@@ -30,7 +31,7 @@ app.set('view engine', 'hbs');
 
 //*** Middleware ***//
 //==================// 
-app.use('/public', express.static(PUBLIC_DIR));
+app.use(express.static(PUBLIC_DIR));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -46,5 +47,6 @@ module.exports = {
     PUBLIC_DIR,
     CONT_DIR,
     CONFIG_DIR,
-    MODELS_DIR
+    MODELS_DIR,
+    VIEWS_DIR
 }
