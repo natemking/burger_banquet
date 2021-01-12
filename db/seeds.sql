@@ -14,3 +14,7 @@ INSERT INTO
   burgers (burger_name)
 VALUES
   ('Kobe Sliders');
+INSERT INTO
+  burgers (burger_name)
+VALUES
+  ('Double Double');
