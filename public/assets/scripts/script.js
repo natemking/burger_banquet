@@ -1,5 +1,5 @@
 $(() => {
-
+    //*** DOM manipulation */
     //Toggle list headings views
     if ($('#menu-list li').length === 0) {
         $('#menu-heading').css('visibility', 'hidden');
@@ -8,6 +8,7 @@ $(() => {
         $('#devoured-heading').css('visibility', 'hidden');
     }
 
+    
     //Add a burger
     $('#add-burger').on('submit', function(e){
         e.preventDefault();

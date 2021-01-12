@@ -4,13 +4,16 @@
     <section class="col-sm-4">
         <ul id="menu-list" class="list-group-flush text-center">
             <h2 id="menu-heading" class="list-heading">Menu</h2>
+            {{!-- Iterate through all burgers --}}
             {{#each burgers}}
+            {{!-- Display burger only if devoured = false (0) in the DB --}}
             {{#unless this.devoured}}
-            <li class="list-group-item d-flex flex-row justify-content-between">
-             
-                    <span>{{this.burger_name}}</span>
-                    <button data-id="{{this.id}}" data-devoured="{{this.devoured}}" type="submit" class="btn btn-success toggle-burger">Devour It!</button>
-                
+            <li class="list-group-item d-flex flex-row justify-content-between">                    
+                <span>{{this.burger_name}}</span>
+                {{!-- Send to the devoured list with a PUT request by toggling devoureds value --}}
+                <button data-id="{{this.id}}" data-devoured="{{this.devoured}}" type="submit" class="btn btn-success toggle-burger">
+                    Devour It!
+                </button>  
             </li>
             {{/unless}}
             {{/each}}
@@ -21,13 +24,17 @@
     <section class="col-sm-6">
         <ul id="devoured-list" class="list-group-flush text-center">
             <h2 id="devoured-heading" class="list-heading">Devoured</h2>
+            {{!-- Iterate through all burgers --}}
             {{#each burgers}}
+            {{!-- Display burger only if devoured = true (1) in the DB --}}
             {{#if this.devoured}}
             <li class="list-group-item d-flex flex-row justify-content-around">
                 <span class="mr-auto p-2">{{this.burger_name}}</span>
+                {{!-- Send back to the menu with a PUT request by toggling devoureds value --}}
                 <button data-id="{{this.id}}" data-devoured="{{this.devoured}}" type="submit" class="btn btn-warning p-2 mr-1 toggle-burger">
                     Make Another?
                 </button>
+                {{!-- Delete from DB with DELETE request --}}
                 <button data-id="{{this.id}}" type="submit" class="btn btn-danger p-2 delete-burger">
                     Trash it
                 </button>
