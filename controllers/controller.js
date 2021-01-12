@@ -11,7 +11,7 @@ const VIEWS_DIR = path.resolve(__dirname, '../views');
 //*** Modules ***//
 //===============//
 const burger = require(`${MODELS_DIR}/burger`);
-const index = path.join(VIEWS_DIR, 'index')
+const index = path.join(VIEWS_DIR, 'index');
 
 //*** Express router ***//
 //======================//

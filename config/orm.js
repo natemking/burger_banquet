@@ -9,14 +9,14 @@ module.exports = {
         pool.query(qStr, table, (err, result) => {
             if(err) throw err;
             cb(result);
-        })
+        });
     },
     insertOne: (table, col, val, cb) => {
         const qStr = 'INSERT INTO ?? (??) VALUES (?);';
         pool.query(qStr, [table, col, val], (err, result) => {
             if (err) throw err;
             cb(result);
-        })
+        });
     },
     updateOne: (table, col, val1, con, val2, cb) => {
         qStr = 'UPDATE ?? SET ?? = ? WHERE ?? = ?;';
