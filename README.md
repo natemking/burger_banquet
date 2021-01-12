@@ -18,6 +18,8 @@ Homework #13 Express-Handlebars: Burger Banquet
     + [Scope of Work](#scope-of-work)
     + [MySQL Functionality](#mysql-functionality)
     + [Node.js functionality](#nodejs-functionality)
+    + [Express-Handlebars](#express-handlebars)
+    + [HTML, CSS & jQuery](#html-css--jquery)
   * [Screenshots](#screenshots)
   * [License](#license)
   * [Credits](#credits)
@@ -29,6 +31,10 @@ Homework #13 Express-Handlebars: Burger Banquet
 ### MySQL Functionality
 
 ### Node.js Functionality
+
+### Express-Handlebars
+
+### HTML, CSS, & jQuery
 
 ## Screenshots
 
