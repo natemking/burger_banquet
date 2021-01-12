@@ -9,6 +9,7 @@
 body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 body {
@@ -82,7 +83,7 @@ max-width: 100%;
 /**************/
 
 footer {
-    position: fixed;
+    position: absolute;
     text-align: end;
     bottom: 0;
     right: 0;
