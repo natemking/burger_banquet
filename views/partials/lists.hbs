@@ -1,8 +1,8 @@
 <section class="row justify-content-around">
 
     {{!-- Menu list --}}
-    <section class="col-sm-4">
-        <ul id="menu-list" class="list-group-flush text-center">
+    <section class="col-sm-4 list-container">
+        <ul id="menu-list" class="list-group list-group-flush text-center">
             <h2 id="menu-heading" class="list-heading">Menu</h2>
             {{!-- Iterate through all burgers --}}
             {{#each burgers}}
@@ -21,8 +21,8 @@
     </section>
 
     {{!-- Devoured list --}}
-    <section class="col-sm-6">
-        <ul id="devoured-list" class="list-group-flush text-center">
+    <section class="col-sm-6 list-container">
+        <ul id="devoured-list" class="list-group list-group-flush text-center">
             <h2 id="devoured-heading" class="list-heading">Devoured</h2>
             {{!-- Iterate through all burgers --}}
             {{#each burgers}}

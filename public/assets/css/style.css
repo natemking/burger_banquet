@@ -107,8 +107,27 @@ footer a:hover{
     .jumbotron{
         min-height: 80vh;
     }
+
     .jumbotron p {
         display: none;
+    }
+
+    #devoured-list li {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    #devoured-list li button {
+        font-size: 14px;
+    }
+
+    .list-container {
+        padding: 0 5px;
+    }
+
+
+    footer{
+        position: static;
     }
 }
 
@@ -116,6 +135,7 @@ footer a:hover{
     .jumbotron h1 {
         font-size: calc(50px + 1vw);
     }
+
     .jumbotron p {
         font-size: 1.5rem;
     }
