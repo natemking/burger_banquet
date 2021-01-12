@@ -82,11 +82,10 @@ max-width: 100%;
 /**************/
 
 footer {
-    position: relative;
+    position: fixed;
     text-align: end;
     bottom: 0;
     right: 0;
-    margin-top: 25px;
     margin-right: 10px;
 }
 
