@@ -20,12 +20,12 @@ $(() => {
         });
     });
 
-    //Toggle from menu
+    //Toggle btwn menu and devoured list
     $('.toggle-burger').on('click', function (e){
         e.preventDefault();
         let id = $(this).data('id');
         let devoured = $(this).data('devoured');
-        //Toggle devoured 
+        //Toggle devoured value
         devoured = 1 - devoured;
        
         $.ajax({
@@ -45,8 +45,6 @@ $(() => {
             url: `/api/burgers/${id}`
         }).then(() =>{
             location.reload();
-        })
-    })
-
-    
+        });
+    });
 });
