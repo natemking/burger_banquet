@@ -10,16 +10,16 @@ $(() => {
     
     $('#add-burger').on('submit', (e) => {
         e.preventDefault();
-        
         $.ajax({
             type: 'POST',
-            url: '/api/burgers',
-            data: $('#add-burger-text').val().trim()
+            url: 'api/burgers',
+            data: {burger: $('#add-burger-text').val().trim()}
         }).then(() =>{
-            console.log('Added burger');
             location.reload();
         });
-    })
+    });
+
+
 
         
     

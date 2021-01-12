@@ -30,7 +30,7 @@ app.set('view engine', 'hbs');
 //*** Middleware ***//
 //==================// 
 app.use('/public', express.static(PUBLIC_DIR));
-// app.use(methodOverride('_method'));
+app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

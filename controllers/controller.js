@@ -2,6 +2,7 @@
 //====================//
 const express = require('express');
 const path = require('path');
+const { resourceUsage } = require('process');
 
 //*** Directories ***//
 //===================//
@@ -22,13 +23,14 @@ const router = express.Router();
 router.route('/api/burgers/:id?')
 .get((req,res) => {
     const id = req.params.id;
-    burger.all((data) => {
-        res.json(data);
+    burger.all(() => {
+        res.end();
     });
 })
-
-router.post('/api/burgers', (req, res) => {
-    console.log(req.body.burger);
+.post((req, res) => {
+    burger.insertOne('burger_name', req.body.burger, (result) => {
+        res.json({id: result.insertId});
+   });
 })
 
 //*** HTML Routes ***//
