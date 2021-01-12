@@ -8,7 +8,6 @@ const path = require('path');
 const MODELS_DIR = path.resolve(__dirname, '../models');
 const VIEWS_DIR = path.resolve(__dirname, '../views');
 
-
 //*** Modules ***//
 //===============//
 const burger = require(`${MODELS_DIR}/burger`);

@@ -4,7 +4,6 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 
-
 //*** Express app ***//
 //===================//
 const app = express();
@@ -14,9 +13,6 @@ const PORT = process.env.PORT || 3000;
 //===================//
 const PUBLIC_DIR = path.resolve(__dirname, './public');
 const CONT_DIR = path.resolve(__dirname, './controllers');
-const CONFIG_DIR = path.resolve(__dirname, './config');
-const MODELS_DIR = path.resolve(__dirname, './models');
-const VIEWS_DIR = path.resolve(__dirname, './views');
 const controller = path.join(CONT_DIR, './controller');
 
 //*** Router ***//
@@ -27,7 +23,6 @@ const router = require(controller);
 //===================//
 app.engine('hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', 'hbs');
-
 
 //*** Middleware ***//
 //==================// 
@@ -42,11 +37,3 @@ app.use('/', router);
 //*** Listener ***//
 //================//
 app.listen(PORT, () => console.log(`Server listening on PORT:${PORT}`));
-
-module.exports = {
-    PUBLIC_DIR,
-    CONT_DIR,
-    CONFIG_DIR,
-    MODELS_DIR,
-    VIEWS_DIR
-}
