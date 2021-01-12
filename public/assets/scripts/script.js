@@ -1,5 +1,6 @@
 $(() => {
-    //*** DOM manipulation */
+    //*** DOM manipulation **//
+    //=======================//
     //Toggle list headings views
     if ($('#menu-list li').length === 0) {
         $('#menu-heading').css('visibility', 'hidden');
@@ -8,7 +9,8 @@ $(() => {
         $('#devoured-heading').css('visibility', 'hidden');
     }
 
-    
+    //*** AJAX calls to send user data to controller ***//
+    //==================================================//
     //Add a burger
     $('#add-burger').on('submit', function(e){
         e.preventDefault();
@@ -28,7 +30,6 @@ $(() => {
         let devoured = $(this).data('devoured');
         //Toggle devoured value
         devoured = 1 - devoured;
-       
         $.ajax({
             type: 'PUT',
             url: `/api/burgers/${id}/${devoured}`,

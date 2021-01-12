@@ -3,7 +3,7 @@
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
-const methodOverride = require('method-override');
+
 
 //*** Express app ***//
 //===================//
@@ -30,7 +30,6 @@ app.set('view engine', 'hbs');
 //*** Middleware ***//
 //==================// 
 app.use('/public', express.static(PUBLIC_DIR));
-app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
