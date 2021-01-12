@@ -6,10 +6,11 @@
             <h2 id="menu-heading" class="list-heading">Menu</h2>
             {{#each burgers}}
             {{#unless this.devoured}}
-            <li class="list-group-item d-flex flex-row justify-content-between"><span>{{this.burger_name}}</span>
-                <form method="POST" action="/update/{{this.id}}/{{this.devoured}}?_method=PUT">
-                    <button type="submit" class="btn btn-success">Devour It!</button>
-                </form>
+            <li class="list-group-item d-flex flex-row justify-content-between">
+             
+                    <span>{{this.burger_name}}</span>
+                    <button data-id="{{this.id}}" data-devoured="{{this.devoured}}" type="submit" class="btn btn-success toggle-burger">Devour It!</button>
+                
             </li>
             {{/unless}}
             {{/each}}
@@ -23,12 +24,12 @@
             {{#each burgers}}
             {{#if this.devoured}}
             <li class="list-group-item d-flex flex-row justify-content-around">
-                <span class="mr-auto p-2">{{this.burger_name}}</span>
-                <form method="POST" action="/update/{{this.id}}/{{this.devoured}}?_method=PUT">
-                    <button type="submit" class="btn btn-warning p-2 mr-1">Make Another?</button>
-                </form>
-                <form method="POST" action="/delete/{{this.id}}?_method=DELETE">
-                    <button type="submit" class="btn btn-danger p-2">Trash it</button>
+                <span>{{this.burger_name}}</span>
+                
+                    <button data-id="{{this.id}}" data-devoured="{{this.devoured}}" type="submit" class="btn btn-warning toggle-burger">Make Another?</button>
+                
+                
+                    <button data-id="{{this.id}}" type="submit" class="btn btn-danger p-2 delete-burger">Trash it</button>
                 </form>
             </li>
             {{/if}}
@@ -37,3 +38,4 @@
     </section>
 
 </section>
+

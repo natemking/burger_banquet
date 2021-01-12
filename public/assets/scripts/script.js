@@ -7,8 +7,9 @@ $(() => {
     if ($('#devoured-list li').length === 0) {
         $('#devoured-heading').css('visibility', 'hidden');
     }
-    
-    $('#add-burger').on('submit', (e) => {
+
+    //Add a burger
+    $('#add-burger').on('submit', function(e){
         e.preventDefault();
         $.ajax({
             type: 'POST',
@@ -19,8 +20,33 @@ $(() => {
         });
     });
 
+    //Toggle from menu
+    $('.toggle-burger').on('click', function (e){
+        e.preventDefault();
+        let id = $(this).data('id');
+        let devoured = $(this).data('devoured');
+        //Toggle devoured 
+        devoured = 1 - devoured;
+       
+        $.ajax({
+            type: 'PUT',
+            url: `/api/burgers/${id}/${devoured}`,
+        }).then(() => {
+          location.reload();
+        });
+    });
 
+    $('.delete-burger').on('click', function (e) { 
+        e.preventDefault();
+        let id = $(this).data('id');
 
-        
+        $.ajax({
+            type: 'DELETE',
+            url: `/api/burgers/${id}`
+        }).then(() =>{
+            location.reload();
+        })
+    })
+
     
 });
