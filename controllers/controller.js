@@ -2,7 +2,6 @@
 //====================//
 const express = require('express');
 const path = require('path');
-const { resourceUsage } = require('process');
 
 //*** Directories ***//
 //===================//
@@ -15,7 +14,7 @@ const index = path.join(VIEWS_DIR, 'index')
 const burger = require(`${MODELS_DIR}/burger`);
 
 //*** Express router ***//
-//===============//
+//======================//
 const router = express.Router();
 
 //*** API Routes ***//

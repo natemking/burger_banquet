@@ -9,7 +9,6 @@ const CONFIG_DIR = path.resolve(__dirname, '../config');
 //*** Modules ***//
 //===============//
 const paths = require('../server');
-
 const orm = require(`${CONFIG_DIR}/orm`);
 
 //DB Table
@@ -30,5 +29,5 @@ module.exports = {
     }
 }
 
-// console.log(require(`${paths.CONFIG_DIR}/orm`));
+// console.log((`${paths.CONFIG_DIR}/orm`));
 // console.log(orm);

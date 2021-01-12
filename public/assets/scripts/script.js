@@ -1,4 +1,5 @@
 $(() => {
+    
     //*** DOM manipulation **//
     //=======================//
     //Toggle list headings views
@@ -14,6 +15,7 @@ $(() => {
     //Add a burger
     $('#add-burger').on('submit', function(e){
         e.preventDefault();
+
         $.ajax({
             type: 'POST',
             url: 'api/burgers',
@@ -23,13 +25,16 @@ $(() => {
         });
     });
 
-    //Toggle btwn menu and devoured list
+    //Toggle burger btwn menu and devoured list
     $('.toggle-burger').on('click', function (e){
         e.preventDefault();
+
         let id = $(this).data('id');
         let devoured = $(this).data('devoured');
+
         //Toggle devoured value
         devoured = 1 - devoured;
+
         $.ajax({
             type: 'PUT',
             url: `/api/burgers/${id}/${devoured}`,
@@ -38,10 +43,12 @@ $(() => {
         });
     });
 
+    //Delete burger
     $('.delete-burger').on('click', function (e) { 
         e.preventDefault();
-        let id = $(this).data('id');
 
+        let id = $(this).data('id');
+        
         $.ajax({
             type: 'DELETE',
             url: `/api/burgers/${id}`
