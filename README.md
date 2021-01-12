@@ -32,21 +32,19 @@ Homework #13 Express-Handlebars: Burger Banquet
 
 ## Screenshots
 
-<!-- <summary><strong></strong></summary>
+![app gif](public/assets/images/screenshots/burger_banquet.gif)
 <br>
-
-
-![app gif](app/assets/images/screenshots/employee_tracker.gif?raw=true)
+_App Functionality_
 <br>
-_App functionality_
-<br> -->
+![mobile resolution](public/assets/images/screenshots/burger_banquet_mobile.png)
+_Mobile Resolution_
 
 ## License
 Licensed under the GNU GPLv3.0 License. Copyright © 2020
 
 ## Credits
 
-<!-- * [Guide to Express-Handlebars](https://stackabuse.com/guide-to-handlebars-templating-engine-for-node/)
+* [Guide to Express-Handlebars](https://stackabuse.com/guide-to-handlebars-templating-engine-for-node/)
 
 * [Better Express routing for Node JS](https://caffeinecoding.com/better-express-routing-for-nodejs/)
 
@@ -54,7 +52,6 @@ Licensed under the GNU GPLv3.0 License. Copyright © 2020
 
 * [Toggle an Boolean](https://stackoverflow.com/questions/11604409/how-to-toggle-a-boolean) 
 
-* [](https://riptutorial.com/express/example/16315/multiple-routes) -->
 
 
 
