@@ -30,10 +30,10 @@ Homework #13 Express-Handlebars: Burger Banquet
 ### Scope of Work
 The user is looking for a fun way to track Hamburgers. They want to be able to add burgers to a menu then mark them as eaten. 
 
-### MySQL Functionality
+### MySQL
 The user's burgers are stored in a MySQL database. It is a very simple schema that consists of one table. The only things, outside of a unique ID, being tracked are a name, and if the burger has been devoured. I utilized MySQL's pool method on this app as it is built with the MVC framework. The initial connection is separate from the ORM and Model. 
 
-### Node.js Functionality
+### Node.js
 The big lift here is coming via Express. I have created a simple server that only has two routes. One to route for the HTML and the other to API for the data. Inside my controller, I have opted to use the router method in express to control my routes. Also, inside my controller I am running the GET, POST, PUT, & DELETE methods for the data. It is here that I am calling the functions for the model to take care of the database manipulation as well as rendering that data to the front end via Express-Handlebars.
 
 ### Express-Handlebars
