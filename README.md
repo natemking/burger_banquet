@@ -27,7 +27,7 @@ Homework #13 Express-Handlebars: Burger Banquet
 ## Description
 
 ### Scope of Work
-
+The user is looking for a fun way to track Hamburgers. They want to be able to add burgers to a menu then mark them ate. 
 ### MySQL Functionality
 
 ### Node.js Functionality
