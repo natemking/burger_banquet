@@ -69,6 +69,9 @@ Licensed under the GNU GPLv3.0 License. Copyright © 2020
 
 * [Toggle a Boolean](https://stackoverflow.com/questions/11604409/how-to-toggle-a-boolean) 
 
+---
 
+GitHub: [@natemking](https://github.com/natemking/)
 
+Email: [natmeking@gmail.com](mailto:natmeking@gmail.com)
 
